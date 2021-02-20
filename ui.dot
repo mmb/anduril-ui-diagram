@@ -5,7 +5,7 @@ digraph {
   off -> "on (stored brightness)"[label="1 click"];
   off -> "on (stored brightness)"[label="hold until increases to desired brightness\nremember brightness"];
   off -> "on (turbo)"[label="2 clicks"];
-  off -> "on (stored brightness)"[label="1 click + hold until decreases to desired brightness\nremember brightness"];
+  off -> "on (stored brightness)"[label="1 click + click and hold until decreases to desired brightness\nremember brightness"];
   off -> locked[label="4 clicks"];
 
   label="Utility Modes"
