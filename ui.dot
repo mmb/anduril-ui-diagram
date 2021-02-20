@@ -8,6 +8,7 @@ digraph {
   off -> "on (stored brightness)"[label="1 click + hold until decreases to desired brightness, store"];
   off -> locked[label="4 clicks"];
 
+  label="Utility Modes"
   off -> "battery check"[label="3 clicks",lhead="cluster_utility"];
   "temperature check" -> off[label="1 click",ltail="cluster_utility"]
   subgraph cluster_utility {
@@ -17,6 +18,7 @@ digraph {
     "temperature check" -> "battery check"[label="2 clicks"]
   }
 
+  label="Strobe Modes"
   off -> candle[label="2 clicks + click and hold, remembers last",lhead="cluster_strobe"];
   lightning -> off[label="1 click",ltail="cluster_strobe"];
   subgraph cluster_strobe {
@@ -35,4 +37,7 @@ digraph {
   "on (stored brightness)" -> off[label="1 click"];
   "on (stored brightness)" -> "on (turbo)"[label="2 clicks"];
   "on (turbo)" -> off[label="1 click"];
+
+  label="Anduril Flashlight UI"
+  labelloc=t
 }
