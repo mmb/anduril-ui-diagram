@@ -12,5 +12,6 @@ digraph {
 
   "on (moonlight)" -> "locked"[label="release"];
   "on (stored brightness)" -> off[label="1 click"];
+  "on (stored brightness)" -> "on (turbo)"[label="2 clicks"];
   "on (turbo)" -> off[label="1 click"];
 }
