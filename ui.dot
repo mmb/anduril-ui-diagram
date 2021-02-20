@@ -1,9 +1,16 @@
 digraph {
+  off[style="filled",color="lightgrey"]
   off -> "on (stored brightness)"[label="1 click"];
   off -> "on (stored brightness)"[label="hold until desired brightness, store"];
+  off -> "on (turbo)"[label="2 clicks"];
+  off -> "on (stored brightness)"[label="1 click + hold until desired brightness, store"];
   off -> locked[label="4 clicks"];
+
+  locked[style="filled",color="lightgrey"]
   locked -> off[label="4 clicks"];
   locked -> "on (moonlight)"[label="hold"];
+
   "on (moonlight)" -> "locked"[label="release"];
   "on (stored brightness)" -> off[label="1 click"];
+  "on (turbo)" -> off[label="1 click"];
 }
