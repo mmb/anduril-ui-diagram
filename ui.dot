@@ -1,0 +1,9 @@
+digraph {
+  off -> "on (stored brightness)"[label="1 click"];
+  off -> "on (stored brightness)"[label="hold until desired brightness, store"];
+  off -> locked[label="4 clicks"];
+  locked -> off[label="4 clicks"];
+  locked -> "on (moonlight)"[label="hold"];
+  "on (moonlight)" -> "locked"[label="release"];
+  "on (stored brightness)" -> off[label="1 click"];
+}
