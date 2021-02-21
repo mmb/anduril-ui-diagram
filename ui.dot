@@ -2,10 +2,10 @@ digraph {
   compound=true
 
   off[style="filled",color="lightgrey"]
-  off -> "on (stored brightness)"[label="1 click"];
-  off -> "on (stored brightness)"[label="hold until increases to desired brightness\nremember brightness"];
+  off -> "on (last brightness)"[label="1 click"];
+  off -> "on (last brightness)"[label="hold until increases to desired brightness\nremember brightness"];
   off -> "on (turbo)"[label="2 clicks"];
-  off -> "on (stored brightness)"[label="1 click + click and hold until decreases to desired brightness\nremember brightness"];
+  off -> "on (last brightness)"[label="1 click + click and hold until decreases to desired brightness\nremember brightness"];
   off -> locked[label="4 clicks"];
 
   label="Utility Modes"
@@ -43,8 +43,8 @@ digraph {
   }
 
   "on (moonlight)" -> "locked"[label="release"];
-  "on (stored brightness)" -> off[label="1 click"];
-  "on (stored brightness)" -> "on (turbo)"[label="2 clicks"];
+  "on (last brightness)" -> off[label="1 click"];
+  "on (last brightness)" -> "on (turbo)"[label="2 clicks"];
   "on (turbo)" -> off[label="1 click"];
 
   label="Anduril Flashlight UI"
