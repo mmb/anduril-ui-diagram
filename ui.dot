@@ -32,6 +32,15 @@ digraph {
   locked[style="filled",color="lightgrey"]
   locked -> off[label="4 clicks"];
   locked -> "on (moonlight)"[label="hold"];
+  locked -> "locked color off"[label="3 clicks",lhead="cluster_locked_color_mode"];
+  "locked color off" -> locked[ltail="cluster_locked_color_mode"];
+  label="Locked Color Mode"
+  subgraph cluster_locked_color_mode {
+    "locked color off" -> "locked color low"[label="3 clicks"]
+    "locked color low" -> "locked color high"[label="3 clicks"]
+    "locked color high" -> "locked color blinking"[label="3 clicks"]
+    "locked color blinking" -> "locked color off"[label="3 clicks"]
+  }
 
   "on (moonlight)" -> "locked"[label="release"];
   "on (stored brightness)" -> off[label="1 click"];
