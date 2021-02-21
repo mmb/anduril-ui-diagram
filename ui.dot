@@ -3,9 +3,9 @@ digraph {
 
   off[style="filled",color="lightgrey"]
   off -> "on (last brightness)"[label="click"];
-  off -> "on (last brightness)"[label="hold until increases to desired brightness\nremember brightness"];
+  off -> "on (last brightness)"[label="hold until desired brightness (increasing)\nremember brightness"];
   off -> "on (turbo)"[label="2 clicks"];
-  off -> "on (last brightness)"[label="click + click and hold until decreases to desired brightness\nremember brightness"];
+  off -> "on (last brightness)"[label="click + click and hold until desired brightness (decreasing)\nremember brightness"];
   off -> locked[label="4 clicks"];
 
   label="Utility Modes"
@@ -19,7 +19,7 @@ digraph {
   }
 
   label="Strobe Modes"
-  off -> candle[label="2 clicks + click and hold\nremembers last",lhead="cluster_strobe"];
+  off -> candle[label="2 clicks + click and hold\nremember last",lhead="cluster_strobe"];
   lightning -> off[label="click",ltail="cluster_strobe"];
   subgraph cluster_strobe {
     candle -> bike[label="2 clicks"]
