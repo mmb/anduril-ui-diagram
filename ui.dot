@@ -8,6 +8,17 @@ digraph {
   off -> "on (last brightness)"[label="click + click and hold until desired brightness (decreasing)\nremember brightness"];
   off -> locked[label="4 clicks"];
 
+  label="Muggle Mode"
+  off -> "muggle off"[label="6 clicks",lhead=cluster_muggle];
+  "muggle on" -> off[label="6 clicks",ltail=cluster_muggle]
+  subgraph cluster_muggle {
+    "muggle off"[label=off];
+    "muggle on"[label=on];
+    "muggle off" -> "muggle on"[label=click,dir=both]
+    "muggle off" -> "muggle on"[label="hold until desired brightness (increasing)"]
+    "muggle on" -> "muggle on"[label="hold until desired brightness (increasing)"]
+  }
+
   label="Utility Modes"
   off -> "battery check"[label="3 clicks",lhead=cluster_utility];
   "temperature check" -> off[label=click,ltail=cluster_utility]
