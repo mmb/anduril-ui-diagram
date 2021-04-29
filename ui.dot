@@ -8,6 +8,11 @@ digraph {
   off -> "on (last brightness)"[label="click + click and hold until desired brightness (decreasing)\nremember brightness"];
   off -> locked[label="4 clicks"];
 
+  off -> "momentary mode off"[label="5 clicks"];
+  "momentary mode off" -> "momentary mode on (last brightness or strobe mode before off)"[label=hold];
+  "momentary mode off" -> off[label="unscrew tailcap"];
+  "momentary mode on (last brightness or strobe mode before off)" -> "momentary mode off"[label=release];
+
   label="Muggle Mode"
   off -> "muggle off"[label="6 clicks",lhead=cluster_muggle];
   "muggle on" -> off[label="6 clicks",ltail=cluster_muggle]
