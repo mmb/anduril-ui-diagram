@@ -51,10 +51,10 @@ digraph {
     "locked color low"[label=low];
     "locked color high"[label=high];
     "locked color blinking"[label=blinking];
-    "locked color off" -> "locked color low"[label="3 clicks"]
-    "locked color low" -> "locked color high"[label="3 clicks"]
-    "locked color high" -> "locked color blinking"[label="3 clicks"]
-    "locked color blinking" -> "locked color off"[label="3 clicks"]
+    "locked color off" -> "locked color low"
+    "locked color low" -> "locked color high"
+    "locked color high" -> "locked color blinking"
+    "locked color blinking" -> "locked color off"
   }
 
   "on (moonlight)" -> locked[label=release];
